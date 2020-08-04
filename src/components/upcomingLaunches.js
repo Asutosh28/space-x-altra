@@ -6,22 +6,23 @@ import Flags from './flags';
 
 const Wrapper = styled.div`
   width: 100%;
+  z-index: 998;
+  text-align: center;
 `;
 
 const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
+  margin-top: 1rem;
 `;
 
 const Heading = styled.h5`
-  margin-left: 5%;
-  margin-top: 3rem;
+  font-weight: 600;
 `;
 
 const Container = styled.div`
-  padding: 2rem 5%;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
+  text-align: left !important;
 `;
 
 const LaunchList = styled.div`
@@ -46,7 +47,7 @@ const Launch = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: ${(props) => props.theme.highlightColor};
+  background-color: #000000d4;
   border: 3px solid ${(props) => props.theme.backgroundColor};
   padding: 36px 24px;
   border-radius: 4px;
@@ -92,24 +93,36 @@ const RocketDetails = styled.div`
 
 const ShowAllWrapper = styled.div`
   display: flex;
+  z-index: 998;
   justify-content: center;
 `;
 
 const FlagWrapper = styled.div`
   margin-top: 1rem;
 `;
-
-const ShowAll = styled.button`
-  background: none;
-  color: ${(props) => props.theme.linkColor};
-  border: 1px solid ${(props) => props.theme.linkColor};
-  border-radius: 3px;
-  display: inline-block;
-  padding: 4px 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: 600;
+const Right = styled.div`
+    float: right;
+    margin-top: 9px;
+    margin-right: 39px;
 `;
+const Left = styled.div`
+  float: left;
+`;
+const ShowAll = styled.button`
+    background: black;
+    color: ${(props) => props.theme.linkColor};
+    border: 1px solid black;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: -4rem;
+    width: 22%
+`;
+
 
 const isPast = (date) => {
   if (moment(Date()).isBefore(date)) {
@@ -164,19 +177,46 @@ const UpcomingLaunches = ({ launches }) => {
   const [limit, setLimit] = useState(count);
 
   return (
-    <Wrapper>
-      <Header>
-        <Heading>UPCOMING LAUNCHES</Heading>
-      </Header>
-      <Container>
-        <LaunchList>{renderList(launches, limit)}</LaunchList>
-      </Container>
       <ShowAllWrapper>
-        <ShowAll onClick={() => setLimit(limit ? null : count)}>
-          {limit ? 'SHOW ALL' : 'SHOW LESS'}
-        </ShowAll>
+          {limit ?
+              <ShowAll onClick={() => setLimit(limit ? null : count)}>
+                  <Left>
+                      UPCOMING LAUNCHES
+                  </Left>
+                  <Right>
+                      <div id="arrowAnim">
+                          <div className="arrowSliding">
+                              <div className="arrow"/>
+                          </div>
+                          <div className="arrowSliding delay1">
+                              <div className="arrow"/>
+                          </div>
+                          <div className="arrowSliding delay2">
+                              <div className="arrow"/>
+                          </div>
+                      </div>
+                  </Right>
+
+              </ShowAll>
+          :
+          ''}
+
+          {!limit ?
+              <Wrapper>
+                  <Header>
+                      <Heading>UPCOMING LAUNCHES</Heading>
+                  </Header>
+                  <Container>
+                      <LaunchList>{renderList(launches, limit)}</LaunchList>
+                  </Container>
+                  <ShowAll onClick={() => setLimit(limit ? null : count)}>
+                      SHOW LESS
+                  </ShowAll>
+              </Wrapper>
+              :
+              ''}
       </ShowAllWrapper>
-    </Wrapper>
+
   );
 };
 

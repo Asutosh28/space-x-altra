@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#arrowAnim {
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 0.5vw;
+  height: 0.5vw;
+  border: 0.3vw solid;
+  border-color: white transparent transparent white;
+  transform: rotate(135deg);
+}
+
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 3s linear infinite;
+  animation: slide 3s linear infinite;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.delay2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+
+  0% { opacity:0; transform: translateX(1.5vw); }
+  20% { opacity:1; transform: translateX(1vw); }
+  100% { opacity:0; transform: translateX(-1.5vw); }
+}
+@keyframes slide {
+  0% { opacity:0; transform: translateX(-1.5vw); }
+  20% { opacity:1; transform: translateX(-1vw); }
+  100% { opacity:0; transform: translateX(1.5vw); }
+}
+
+@media all and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+    width: 50%;
+    height: fit-content;
+    background: #00bcd4cc;
+  }
+
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}

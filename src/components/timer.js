@@ -11,7 +11,7 @@ const TimerWrapper = styled.div`
   svg {
     width: 100%;
     text {
-      fill: ${(props) => props.theme.linkColor};
+      fill: #a0da5d;
     }
   }
 `;
@@ -37,7 +37,7 @@ const UnitWrapper = styled.div`
 `;
 
 const Unit = styled.div`
-  color: gray;
+  color: white;
   flex: 1;
   display: flex;
   justify-content: center;

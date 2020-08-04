@@ -89,7 +89,7 @@ const AboutPage = () => {
           <Story>
             <h3>WHAT</h3>
             <p>
-              X-Watch is an open source application for viewing data about
+              space-x-altra is an open source application for viewing data about
               upcoming and previous SpaceX launches. It includes a countdown
               timer that displays the time until the next launch, and launch
               details (launch data, photos, and links to media) about each
@@ -102,17 +102,17 @@ const AboutPage = () => {
               are interested in seeing the source code and/or contributing to
               this project, check out{' '}
               <a
-                href="https://github.com/mattmillsxyz/x-watch"
-                aria-label="Go to the X-Watch source code on GitHub"
+                href="https://github.com/mattmillsxyz/space-x-altra"
+                aria-label="Go to the space-x-altra source code on GitHub"
               >
-                X-Watch on GitHub
+                space-x-altra on GitHub
               </a>
               .
             </p>
             <h3>WHO</h3>
             <p>
-              This application was developed by Matt Mills, a software engineer,
-              designer, and artist from Austin, Texas. Special thanks to{' '}
+              This application was developed by Asutosh Choudhury, a software engineer,
+              designer, and artist from India. Special thanks to{' '}
               <a
                 href="https://github.com/jakewmeyer"
                 aria-label="Go to Jake Meyer on GitHub"
@@ -140,12 +140,7 @@ const AboutPage = () => {
               <Details>
                 <Heading>Created by:</Heading>
                 <Detail>
-                  <a
-                    href="https://mattmills.xyz"
-                    aria-label="Go to Matt Mills' website"
-                  >
-                    Matt Mills
-                  </a>
+                 Asutosh Choudhury
                 </Detail>
               </Details>
               <Details>

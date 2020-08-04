@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import CloseIcon from '../images/close-icon.svg';
-import Logo from '../images/x-watch-logo.svg';
+import Logo from '../images/spaceX.png';
 
 const Menu = styled.div`
   position: fixed;
@@ -102,7 +102,7 @@ const MobileMenu = (props) => {
         </MenuHeader>
         {props.children}
         <MenuFooter>
-          <img src={Logo} alt="X-Watch logo" />
+          <img src={Logo} alt="space-x-altra logo" />
         </MenuFooter>
       </Menu>
     </MenuWrapper>

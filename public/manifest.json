@@ -1,9 +1,9 @@
 {
-  "short_name": "X-Watch",
-  "name": "X-Watch",
+  "short_name": "space-x-altra",
+  "name": "space-x-altra",
   "icons": [
     {
-      "src": "x-watch-icon.png",
+      "src": "space-x-altra-icon.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     }

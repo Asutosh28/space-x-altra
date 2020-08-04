@@ -4,6 +4,7 @@ import moment from 'moment';
 
 const Wrapper = styled.div`
   display: flex;
+  font-size: 1.1rem;
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
 
 const Heading = styled.span`
   margin-right: 0.5rem;
-  color: grey;
+  color: white;
 `;
 
 const LeftBlock = styled.div`

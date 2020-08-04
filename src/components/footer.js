@@ -13,9 +13,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       A project by{' '}
-      <a href="https://mattmills.xyz" aria-label="Go to Matt Mills' website">
-        Matt Mills
-      </a>{' '}
+        Asutosh Choudhury{' '}
       using the
       {` `}
       <a
