@@ -102,7 +102,7 @@ const AboutPage = () => {
               are interested in seeing the source code and/or contributing to
               this project, check out{' '}
               <a
-                href="https://github.com/mattmillsxyz/space-x-altra"
+                href="https://github.com/Asutosh28/spacex-altra/settings"
                 aria-label="Go to the space-x-altra source code on GitHub"
               >
                 space-x-altra on GitHub
