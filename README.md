@@ -6,7 +6,7 @@
 
 <strong>DISCLAIMER:</strong> The maintainers of this project have no affiliation with [SpaceX](https://www.spacex.com/). The content herein should be considered for educational purposes only.
 
-View the live site at [https://space-x-altra.xyz](https://space-x-altra.xyz).
+View the live site at [https://asutosh28.github.io/login](https://asutosh28.github.io/login).
 
 This project was built using [React JS](https://reactjs.org/), [Styled Components](https://www.styled-components.com/), and the [SpaceX-API](https://github.com/r-spacex/SpaceX-API).
 
